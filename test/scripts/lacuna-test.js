@@ -1,16 +1,14 @@
-'use strict'
+import lacuna from './test-instance'
+import log from '../../lib/log'
+import util from '../../lib/util'
 
-let lacuna = require('./test-instance')
-let log = require('../../lib/log')
-let util = require('../../lib/util')
+import cache from '../../lib/lacuna/cache'
 
-let cache = require('../../lib/lacuna/cache')
-
-let _ = require('lodash')
+import _ from 'lodash'
 
 lacuna.authenticate().then((sessionId) => {
   log.info(`Session ID is ${sessionId}`)
-  return lacuna.empire.getStatus()
+  return lacuna.empire.getStatus({})
 }).then((result) => {
   log.info(`My name is ${result.empire.name}`)
   log.info(`I have ${result.empire.essentia} Essentia`)

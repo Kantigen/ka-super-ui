@@ -1,5 +1,3 @@
-'use strict'
-
 // While it's near impossible to test individual tasks this test module
 // tests whatever it can.
 
@@ -7,7 +5,7 @@
 /* global it */
 
 let expect = require('chai').expect
-let _ = require('lodash')
+import _ from 'lodash'
 
 let tasks = require('../lib/tasks').getAllTasks()
 

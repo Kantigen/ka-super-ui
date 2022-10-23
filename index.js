@@ -1,11 +1,5 @@
-'use strict'
+import log from './lib/log'
+import tasks from './lib/tasks'
+import util from './lib/util'
 
-let log = require('./lib/log')
-let tasks = require('./lib/tasks')
-let util = require('./lib/util')
-
-module.exports = {
-  log,
-  tasks,
-  util
-}
+export { log, tasks, util };

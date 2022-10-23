@@ -1,12 +1,10 @@
-'use strict'
-
 /* global describe */
 /* global it */
 
 let expect = require('chai').expect
-let _ = require('lodash')
+import _ from 'lodash'
 
-let constants = require('../lib/constants')
+import constants from '../lib/constants'
 
 describe('constants', () => {
   describe('#serverDateFormat', () => {

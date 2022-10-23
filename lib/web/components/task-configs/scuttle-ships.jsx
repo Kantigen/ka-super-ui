@@ -1,12 +1,10 @@
-'use strict'
+import React from 'react'
+import _ from 'lodash'
 
-let React = require('react')
-let _ = require('lodash')
+import ColonyList from './helpers/colony-list'
+import List from './helpers/list'
 
-let ColonyList = require('./helpers/colony-list')
-let List = require('./helpers/list')
-
-let constants = require('../../../constants')
+import constants from '../../../constants'
 
 let ScuttleShipsConfig = React.createClass({
 
@@ -48,4 +46,4 @@ let ScuttleShipsConfig = React.createClass({
   }
 })
 
-module.exports = ScuttleShipsConfig
+export default ScuttleShipsConfig

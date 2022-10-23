@@ -1,10 +1,8 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let Captcha = require('./helpers/captcha')
-let ColonyList = require('./helpers/colony-list')
-let DryRunCheckbox = require('./helpers/dry-run-checkbox')
+import Captcha from './helpers/captcha'
+import ColonyList from './helpers/colony-list'
+import DryRunCheckbox from './helpers/dry-run-checkbox'
 
 let SpyTrainerConfig = React.createClass({
 
@@ -30,4 +28,4 @@ let SpyTrainerConfig = React.createClass({
   }
 })
 
-module.exports = SpyTrainerConfig
+export default SpyTrainerConfig

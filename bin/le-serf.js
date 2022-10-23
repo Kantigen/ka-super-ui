@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-'use strict'
+import program from 'commander'
+import _ from 'lodash'
 
-let program = require('commander')
-let _ = require('lodash')
+import * as taskIndex from '../lib/tasks'
+cosnt tasks = taskIndex.getTasksForPlatform('cli');
 
-let tasks = require('../lib/tasks').getTasksForPlatform('cli')
-
-let pkgj = require('../package.json')
+import pkgj from '../package.json'
 
 program
   .version(pkgj.version)

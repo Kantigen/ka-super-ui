@@ -1,6 +1,4 @@
-'use strict'
-
-let React = require('react')
+import React from 'react'
 
 let Checkbox = React.createClass({
 
@@ -76,4 +74,4 @@ let Checkbox = React.createClass({
   }
 })
 
-module.exports = Checkbox
+export default Checkbox

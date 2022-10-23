@@ -1,8 +1,6 @@
-'use strict'
-
-let program = require('commander')
-let _ = require('lodash')
-let runner = require('../lib/cli/task-runner')
+import program from 'commander'
+import _ from 'lodash'
+import runner from '../lib/cli/task-runner'
 
 let list = (str) => str.split(',')
 

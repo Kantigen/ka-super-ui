@@ -1,7 +1,5 @@
-'use strict'
-
-let React = require('react')
-let _ = require('lodash')
+import React from 'react'
+import _ from 'lodash'
 
 const colorLogLevelMap = {
   error: 'rgb(232, 61, 48)',
@@ -48,4 +46,4 @@ let LogMessage = React.createClass({
   }
 })
 
-module.exports = LogMessage
+export default LogMessage

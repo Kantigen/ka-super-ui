@@ -1,11 +1,9 @@
-'use strict'
+import React from 'react'
+import Reflux from 'reflux'
 
-let React = require('react')
-let Reflux = require('reflux')
+import BodyList from './body-list'
 
-let BodyList = require('./body-list')
-
-let EmpireStore = require('../../../stores/empire')
+import EmpireStore from '../../../stores/empire'
 
 let ColonyList = React.createClass({
 
@@ -41,4 +39,4 @@ let ColonyList = React.createClass({
   }
 })
 
-module.exports = ColonyList
+export default ColonyList

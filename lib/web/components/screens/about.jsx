@@ -1,10 +1,8 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
+import Gravatar from 'react-gravatar'
 
-let Gravatar = require('react-gravatar')
-
-let packageJson = require('../../../../package')
+import packageJson from '../../../../package'
 let repoURL = packageJson.repository.url
 
 let changesLink = repoURL + '#' + packageJson.version.replace(/\./g, '')
@@ -37,4 +35,4 @@ let AboutScreen = React.createClass({
   }
 })
 
-module.exports = AboutScreen
+export default AboutScreen;

@@ -1,12 +1,10 @@
-'use strict'
+import React from 'react'
+import Reflux from 'reflux'
+import _ from 'lodash'
 
-let React = require('react')
-let Reflux = require('reflux')
-let _ = require('lodash')
+import LogMessage from '../menu/log-message'
 
-let LogMessage = require('../menu/log-message')
-
-let RunnerStore = require('../../stores/runner')
+import RunnerStore from '../../stores/runner'
 
 let OutputScreen = React.createClass({
 
@@ -52,4 +50,4 @@ let OutputScreen = React.createClass({
   }
 })
 
-module.exports = OutputScreen
+export default OutputScreen

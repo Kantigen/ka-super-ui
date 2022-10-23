@@ -1,11 +1,9 @@
-'use strict'
-
 /* global describe */
 /* global it */
 
 let expect = require('chai').expect
 
-let types = require('../lib/types')
+import types from '../lib/types'
 
 describe('types', () => {
   describe('#translateShipType', () => {

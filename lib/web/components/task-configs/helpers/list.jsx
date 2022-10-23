@@ -1,7 +1,5 @@
-'use strict'
-
-let React = require('react')
-let _ = require('lodash')
+import React from 'react'
+import _ from 'lodash'
 
 let List = React.createClass({
 
@@ -39,4 +37,4 @@ let List = React.createClass({
   }
 })
 
-module.exports = List
+export default List

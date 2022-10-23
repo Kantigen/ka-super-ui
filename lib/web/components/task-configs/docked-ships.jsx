@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let ColonyList = require('./helpers/colony-list')
+import ColonyList from './helpers/colony-list'
 
 let DockedShipsConfig = React.createClass({
 
@@ -23,4 +21,4 @@ let DockedShipsConfig = React.createClass({
   }
 })
 
-module.exports = DockedShipsConfig
+export default DockedShipsConfig

@@ -1,136 +1,36 @@
 <html>
-<head>
-  <title>Le Serf</title>
+  <head>
+    <title>KA Super UI</title>
 
-  <style type="text/css">
-    /* Fix up the messenger box to look nicer. */
-    .messenger-message {
-      width: 50%;
-      margin: 0 auto;
-      text-align: center;
-    }
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@3.4.1/dist/css/bootstrap.css" type="text/css">
 
-    /* Styles for the loading screen */
-    #loading-container {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-color: #2d2d2d;
-      z-index: 1000;
-    }
-
-    #loading-header {
-      /* These are the default fonts from Bootstrap. */
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-size: 70px;
-      font-weight: bold;
-
-      color: #202020;
-      letter-spacing: .1em;
-      text-shadow:
-        -1px -1px 1px #111,
-        2px 2px 1px #363636;
-
-
-      text-align: center;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-  </style>
-
-  <script>
-    // Le Serf checks for this variable to determine if it's running in web or CLI.
-    window.LE_SERF_WEB = true
-  </script>
-</head>
-<body>
-  <div id="loading-container">
-    <div id="loading-header">
-      LOADING
-    </div>
-  </div>
-
-  <!-- This is the main container of the app. React puts all its stuff in here. -->
-  <div id="main"></div>
-
-  <script type="text/javascript" id="loader">
-    var HEAD = document.getElementsByTagName('head')[0]
-    var ORIGIN = window.location.origin
-
-    function loadCSS (url, cb) {
-      var link = document.createElement('link')
-      link.rel = 'stylesheet'
-      link.type = 'text/css'
-      link.href = ORIGIN + url
-      link.onload = function () {
-        cb()
+    <style type="text/css">
+      /* Fix up the messenger box to look nicer. */
+      .messenger-message {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
       }
+    </style>
 
-      HEAD.appendChild(link)
-    }
+    <script>
+      // Le Serf checks for this variable to determine if it's running in web or CLI.
+      window.LE_SERF_WEB = true
+    </script>
+  </head>
+  <body>
+    <!-- This is the main container of the app. React puts all its stuff in here. -->
+    <div id="main"></div>
 
-    function loadJS (url, cb) {
-      var script = document.createElement('script')
-      script.type = 'text/javascript'
-      script.src = ORIGIN + url
-      script.onload = function () {
-        cb()
-      }
+    <script type="text/javascript" src="https://unpkg.com/jquery@2.2.4/dist/jquery.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/bootstrap@3.4.1/dist/js/bootstrap.js"></script>
+    <script type="module" src="/lib/web/index.jsx"></script>
 
-      HEAD.appendChild(script)
-    }
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        window.LeSerfLoad();
+      });
+    </script>
 
-    function loadFile(url, cb) {
-      var pieces = url.split('.')
-      var extension = pieces[pieces.length - 1]
-
-      if (extension === 'css') {
-        loadCSS(url, cb)
-      } else if (extension === 'js') {
-        loadJS(url, cb)
-      } else {
-        console.error('Unrecognised type of file ' + url)
-        cb()
-      }
-    }
-
-    function loadFiles (files, cb) {
-      function load () {
-        var url = files.shift()
-
-        if (url) {
-          loadFile(url, load)
-        } else {
-          // We've made it to the end of the array
-          cb()
-        }
-      }
-
-      load()
-    }
-
-    loadFiles([
-      '/bower_components/css-spinners/css/spinner/pong.css',
-
-      '/bower_components/bootstrap/dist/css/bootstrap.min.css',
-      '/bower_components/jquery/dist/jquery.min.js',
-      '/bower_components/bootstrap/dist/js/bootstrap.min.js',
-      '/bower_components/messenger/build/js/messenger.min.js',
-
-      '/bower_components/messenger/build/css/messenger.css',
-      '/bower_components/messenger/build/css/messenger-theme-block.css',
-
-      '/build/bundle.js'
-    ], function () {
-      // Load everything up
-      window.LeSerfLoad()
-
-      setTimeout(function () {
-        $('#loading-container').fadeOut(500)
-      }, 2000)
-    })
-
-  </script>
-</body>
+  </body>
 </html>

@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let TaskConfigurationSection = require('../menu/task-configuration-section')
+import TaskConfigurationSection from '../menu/task-configuration-section'
 
 let TasksScreen = React.createClass({
   render () {
@@ -16,4 +14,4 @@ let TasksScreen = React.createClass({
   }
 })
 
-module.exports = TasksScreen
+export default TasksScreen

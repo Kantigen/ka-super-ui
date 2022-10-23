@@ -1,12 +1,10 @@
-'use strict'
-
 /* global describe */
 /* global it */
 
 let expect = require('chai').expect
-let _ = require('lodash')
+import _ from 'lodash'
 
-let util = require('../lib/util')
+import util from '../lib/util'
 
 describe('util', () => {
   describe('#array', () => {

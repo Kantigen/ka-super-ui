@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let ColonyList = require('./helpers/colony-list')
+import ColonyList from './helpers/colony-list'
 
 let MakeHallsConfig = React.createClass({
 
@@ -23,4 +21,4 @@ let MakeHallsConfig = React.createClass({
   }
 })
 
-module.exports = MakeHallsConfig
+export default MakeHallsConfig

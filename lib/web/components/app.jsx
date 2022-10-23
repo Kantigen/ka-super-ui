@@ -1,10 +1,8 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
+import * as bootstrapper from '../bootstrapper'
 
-let bootstrapper = require('../bootstrapper')
-
-let NavBar = require('./menu/nav-bar')
+import NavBar from './menu/nav-bar'
 
 let App = React.createClass({
   propTypes: {
@@ -30,4 +28,4 @@ let App = React.createClass({
   }
 })
 
-module.exports = App
+export default App

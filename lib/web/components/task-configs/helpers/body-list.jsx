@@ -1,9 +1,7 @@
-'use strict'
+import React from 'react'
+import _ from 'lodash'
 
-let React = require('react')
-let _ = require('lodash')
-
-let List = require('./list')
+import List from './list'
 
 let BodyList = React.createClass({
 
@@ -60,4 +58,4 @@ let BodyList = React.createClass({
   }
 })
 
-module.exports = BodyList
+export default BodyList

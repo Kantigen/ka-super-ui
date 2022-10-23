@@ -1,11 +1,9 @@
-'use strict'
+import React from 'react'
+import Reflux from 'reflux'
 
-let React = require('react')
-let Reflux = require('reflux')
+import CaptchaActions from '../../../actions/captcha'
 
-let CaptchaActions = require('../../../actions/captcha')
-
-let CaptchaStore = require('../../../stores/captcha')
+import CaptchaStore from '../../../stores/captcha'
 
 let Captcha = React.createClass({
   mixins: [
@@ -167,4 +165,4 @@ let Captcha = React.createClass({
   }
 })
 
-module.exports = Captcha
+export default Captcha

@@ -1,6 +1,6 @@
-'use strict'
+import lacuna from '../../lib/lacuna';
 
-module.exports = require('../../lib/lacuna').init({
+export default lacuna.init({
   empire: 'lacuna.js Test',
   password: '123qwe', // Don't be creepy, okay? :)
   server: 'pt'

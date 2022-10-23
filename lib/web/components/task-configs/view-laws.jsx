@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let util = require('../../../util')
+import util from '../../../util'
 
 let ViewLawsConfig = React.createClass({
 
@@ -30,4 +28,4 @@ let ViewLawsConfig = React.createClass({
   }
 })
 
-module.exports = ViewLawsConfig
+export default ViewLawsConfig

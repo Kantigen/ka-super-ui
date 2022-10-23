@@ -1,18 +1,18 @@
-'use strict'
+import React from 'react'
+import Reflux from 'reflux'
 
-let React = require('react')
-let Reflux = require('reflux')
+import * as taskIndex from '../../../../lib/tasks';
 
-let tasks = require('../../../../lib/tasks').getTasksForPlatform('web')
+import taskConfigs from '../task-configs'
 
-let taskConfigs = require('../task-configs')
+import CaptchaActions from '../../actions/captcha'
+import RunnerActions from '../../actions/runner'
+import WindowActions from '../../actions/window'
 
-let CaptchaActions = require('../../actions/captcha')
-let RunnerActions = require('../../actions/runner')
-let WindowActions = require('../../actions/window')
+import RunnerStore from '../../stores/runner'
+import SelectedTaskStore from '../../stores/selectedTask'
 
-let RunnerStore = require('../../stores/runner')
-let SelectedTaskStore = require('../../stores/selectedTask')
+const tasks = taskIndex.getTasksForPlatform('web');
 
 let TasksConfigurationSection = React.createClass({
 
@@ -116,4 +116,4 @@ let TasksConfigurationSection = React.createClass({
   }
 })
 
-module.exports = TasksConfigurationSection
+export default TasksConfigurationSection

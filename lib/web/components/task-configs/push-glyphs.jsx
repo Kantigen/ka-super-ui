@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let ColonyList = require('./helpers/colony-list')
+import ColonyList from './helpers/colony-list'
 
 let PushGlyphsConfig = React.createClass({
 
@@ -37,4 +35,4 @@ let PushGlyphsConfig = React.createClass({
   }
 })
 
-module.exports = PushGlyphsConfig
+export default PushGlyphsConfig

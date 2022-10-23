@@ -1,13 +1,11 @@
-'use strict'
-
 /* global describe */
 /* global it */
 /* global beforeEach */
 
 let expect = require('chai').expect
-let _ = require('lodash')
+import _ from 'lodash'
 
-let log = require('../lib/log')
+import log from '../lib/log'
 log.silent()
 
 describe('log', () => {

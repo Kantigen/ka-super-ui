@@ -1,15 +1,13 @@
-'use strict'
+import React from 'react'
+import _ from 'lodash'
 
-let React = require('react')
-let _ = require('lodash')
+import util from '../../../util'
+import constants from '../../../constants'
 
-let util = require('../../../util')
-let constants = require('../../../constants')
-
-let Checkbox = require('./helpers/checkbox')
-let ColonyList = require('./helpers/colony-list')
-let DryRunCheckbox = require('./helpers/dry-run-checkbox')
-let List = require('./helpers/list')
+import Checkbox from './helpers/checkbox'
+import ColonyList from './helpers/colony-list'
+import DryRunCheckbox from './helpers/dry-run-checkbox'
+import List from './helpers/list'
 
 let BuildShipsConfig = React.createClass({
 
@@ -67,4 +65,4 @@ let BuildShipsConfig = React.createClass({
   }
 })
 
-module.exports = BuildShipsConfig
+export default BuildShipsConfig

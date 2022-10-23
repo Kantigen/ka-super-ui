@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let Checkbox = require('./checkbox')
+import Checkbox from './checkbox'
 
 let DryRunCheckbox = React.createClass({
 
@@ -33,4 +31,4 @@ let DryRunCheckbox = React.createClass({
   }
 })
 
-module.exports = DryRunCheckbox
+export default DryRunCheckbox

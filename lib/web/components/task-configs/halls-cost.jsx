@@ -1,9 +1,7 @@
-'use strict'
+import React from 'react'
+import _ from 'lodash'
 
-let React = require('react')
-let _ = require('lodash')
-
-let util = require('../../../util')
+import util from '../../../util'
 
 let HallsCost = React.createClass({
 
@@ -40,4 +38,4 @@ let HallsCost = React.createClass({
   }
 })
 
-module.exports = HallsCost
+export default HallsCost

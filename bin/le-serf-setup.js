@@ -1,8 +1,6 @@
-'use strict'
+import log from '../lib/log'
 
-let log = require('../lib/log')
-
-let config = require('../lib/cli/config')
+import config from '../lib/cli/config'
 
 config.setup(() => {
   log.info('Successfully set up the config file')

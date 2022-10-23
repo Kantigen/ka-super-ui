@@ -1,11 +1,10 @@
-'use strict'
+import React from 'react'
+import _ from 'lodash'
 
-let React = require('react')
-let _ = require('lodash')
+import * as taskIndex from '../../../../lib/tasks'
+const tasks = taskIndex.getTasksForPlatform('web');
 
-let tasks = require('../../../../lib/tasks').getTasksForPlatform('web')
-
-let RunnerActions = require('../../actions/runner')
+import RunnerActions from '../../actions/runner'
 
 let TaskSelectionScreen = React.createClass({
 
@@ -47,4 +46,4 @@ let TaskSelectionScreen = React.createClass({
   }
 })
 
-module.exports = TaskSelectionScreen
+export default TaskSelectionScreen

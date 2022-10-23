@@ -1,37 +1,19 @@
-'use strict'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-let React = require('react')
-let ReactDOM = require('react-dom')
+import { Router, Route } from 'react-router';
 
-let ReactRouter = require('react-router')
-let Router = ReactRouter.Router
-let Route = ReactRouter.Route
+import AboutScreen from './components/screens/about';
+import LoginScreen from './components/screens/login';
+import OutputScreen from './components/screens/output';
+import TaskConfigurationScreen from './components/screens/task-configuration';
+import TaskSelectionScreen from './components/screens/task-selection';
 
-let AboutScreen = require('./components/screens/about')
-let LoginScreen = require('./components/screens/login')
-let OutputScreen = require('./components/screens/output')
-let TaskConfigurationScreen = require('./components/screens/task-configuration')
-let TaskSelectionScreen = require('./components/screens/task-selection')
+import App from './components/app';
 
-let App = require('./components/app')
+import history from './history';
 
-let history = require('./history')
-
-require('./error-handler')
-
-// When a release happens the index.html file may have changed. In which case we need to
-// reaload (without cache) on the client side so the user gets the changes.
-let lastLoadedVersion = window.localStorage.lastLoadedVersion
-let currentVersion = require('../../package.json').version
-
-if (lastLoadedVersion !== currentVersion) {
-  console.log('Reloading to get new version...')
-  console.log(`Last loaded version: ${lastLoadedVersion}`)
-  console.log(`Current version: ${currentVersion}`)
-
-  window.localStorage.lastLoadedVersion = currentVersion
-  window.location.reload(true)
-}
+import './error-handler';
 
 // This function is called by the loader after it's finished doing its thing.
 window.LeSerfLoad = () => {

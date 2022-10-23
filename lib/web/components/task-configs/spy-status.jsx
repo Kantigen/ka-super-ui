@@ -1,8 +1,6 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let ColonyList = require('./helpers/colony-list')
+import ColonyList from './helpers/colony-list'
 
 let SpyStatusConfig = React.createClass({
 
@@ -23,4 +21,4 @@ let SpyStatusConfig = React.createClass({
   }
 })
 
-module.exports = SpyStatusConfig
+export default SpyStatusConfig

@@ -1,15 +1,12 @@
-'use strict'
+import React from 'react'
+import Reflux from 'reflux'
 
-let React = require('react')
-let Reflux = require('reflux')
+import { Link } from 'react-router'
 
-let ReactRouter = require('react-router')
-let Link = ReactRouter.Link
+import WindowActions from '../../actions/window'
+import EmpireActions from '../../actions/empire'
 
-let WindowActions = require('../../actions/window')
-let EmpireActions = require('../../actions/empire')
-
-let EmpireStore = require('../../stores/empire')
+import EmpireStore from '../../stores/empire'
 
 let BrandSection = React.createClass({
 
@@ -114,4 +111,4 @@ let NavBar = React.createClass({
   }
 })
 
-module.exports = NavBar
+export default NavBar

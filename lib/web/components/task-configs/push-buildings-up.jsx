@@ -1,10 +1,8 @@
-'use strict'
+import React from 'react'
 
-let React = require('react')
-
-let ColonyList = require('./helpers/colony-list')
-let DryRunCheckbox = require('./helpers/dry-run-checkbox')
-let Checkbox = require('./helpers/checkbox')
+import ColonyList from './helpers/colony-list'
+import DryRunCheckbox from './helpers/dry-run-checkbox'
+import Checkbox from './helpers/checkbox'
 
 let PushBuildingsUpConfig = React.createClass({
 
@@ -31,4 +29,4 @@ let PushBuildingsUpConfig = React.createClass({
   }
 })
 
-module.exports = PushBuildingsUpConfig
+export default PushBuildingsUpConfig

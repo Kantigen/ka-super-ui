@@ -1,9 +1,7 @@
-'use strict'
+import program from 'commander'
+import _ from 'lodash'
 
-let program = require('commander')
-let _ = require('lodash')
-
-let runner = require('../lib/cli/task-runner')
+import runner from '../lib/cli/task-runner'
 
 program
   .option('-p, --planet [planet name]', 'the planet to make halls on')

@@ -1,13 +1,11 @@
-'use strict'
-
-let React = require('react')
-let Reflux = require('reflux')
-let _ = require('lodash')
+import React from 'react'
+import Reflux from 'reflux'
+import _ from 'lodash'
 let $ = window.jQuery
 
-let bootstrapper = require('../../bootstrapper')
+import * as bootstrapper from '../../bootstrapper'
 
-let ConfigStore = require('../../stores/config')
+import ConfigStore from '../../stores/config'
 
 let LoginScreen = React.createClass({
 
@@ -72,6 +70,7 @@ let LoginScreen = React.createClass({
               <select className='form-control' ref='server'>
                 <option value='us1'>US1</option>
                 <option value='pt'>Public Test</option>
+                <option value='http://localhost:8080'>Local Server</option>
               </select>
             </div>
 
@@ -89,4 +88,4 @@ let LoginScreen = React.createClass({
   }
 })
 
-module.exports = LoginScreen
+export default LoginScreen
